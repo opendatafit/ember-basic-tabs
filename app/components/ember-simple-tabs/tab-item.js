@@ -1,0 +1,1 @@
+export { default } from 'ember-simple-tabs/components/ember-simple-tabs/tab-item';
