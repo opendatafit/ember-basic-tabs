@@ -1,3 +1,25 @@
 <h2 id="title">Welcome to Ember</h2>
 
+<EmberSimpleTabs::TabList 
+    @tabContext={{this.myTabContext}}
+    as |tl|>
+  {{#each this.myTabContext.tabs as |tab index|}}
+    <li class={{if (eq this.myTabContext.selectedIndex index) "isActive"}}>
+      <tl.tab @index={{index}}>
+        {{tab.title}}
+      </tl.tab>
+    </li>
+  {{/each}}
+</EmberSimpleTabs::TabList>
+
+<EmberSimpleTabs::TabPanels 
+    @tabContext={{this.myTabContext}}
+    as |tl|>
+  {{#each this.myTabContext.tabs as |tab index|}}
+    <tl.panel @index={{index}}>
+      {{tab.content}}
+    </tl.panel>
+  {{/each}}
+</EmberSimpleTabs::TabPanels>
+
 {{outlet}}
