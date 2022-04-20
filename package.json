@@ -1,7 +1,7 @@
 {
   "name": "ember-simple-tabs",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1-alpha.0",
+  "description": "A very simple tabs Ember addon with object-controlled state",
   "keywords": [
     "ember-addon"
   ],
