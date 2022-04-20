@@ -1,1 +1,10 @@
-{{yield}}
+<ul class={{this.className}} role="tablist" ...attributes>
+  {{yield
+    (hash
+      tab=(component
+        "ember-simple-tabs/tab-item"
+        tabContext=@tabContext
+      )
+    )
+  }}
+</ul>

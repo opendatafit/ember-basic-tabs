@@ -1,1 +1,5 @@
-{{yield}}
+<div role="tabpanel"
+    aria-hidden={{if (eq @tabContext.selectedIndex @index) "false" "true"}}
+    >
+  {{yield}}
+</div>

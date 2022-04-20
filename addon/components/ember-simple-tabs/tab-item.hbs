@@ -1,1 +1,6 @@
-{{yield}}
+<button 
+    role="tab"
+    aria-selected={{if (eq @tabContext.selectedIndex @index) "true" "false"}}
+    {{on "click" (fn @tabContext.handleButtonClick @index)}}>
+  {{yield}}
+</button>
