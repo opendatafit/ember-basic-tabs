@@ -1,1 +1,1 @@
-export { default } from 'ember-simple-tabs/utils/tab-context';
+export { default } from '@opendata.fit/ember-simple-tabs/utils/tab-context';

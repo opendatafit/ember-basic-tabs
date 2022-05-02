@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
 
-import TabContext from 'ember-simple-tabs/utils/tab-context';
+import TabContext from '@opendata.fit/ember-simple-tabs/utils/tab-context';
 
 export default class ApplicationController extends Controller {
   tabs = [
