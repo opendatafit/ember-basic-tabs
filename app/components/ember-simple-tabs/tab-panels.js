@@ -1,1 +1,1 @@
-export { default } from '@opendata.fit/ember-simple-tabs/components/ember-simple-tabs/tab-panels';
+export { default } from '@opendatafit/ember-simple-tabs/components/ember-simple-tabs/tab-panels';
