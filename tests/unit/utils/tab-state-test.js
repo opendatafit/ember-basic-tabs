@@ -1,11 +1,11 @@
-import tabContext from 'dummy/utils/tab-context';
+import tabState from 'dummy/utils/tab-state';
 import { module, test } from 'qunit';
 
-module('Unit | Utility | tab-context', function() {
+module('Unit | Utility | tab-state', function() {
 
   // TODO: Replace this with your real tests.
   test('it works', function(assert) {
-    let result = tabContext();
+    let result = tabState();
     assert.ok(result);
   });
 });

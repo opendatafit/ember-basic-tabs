@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
 
-import TabContext from '@opendatafit/ember-simple-tabs/utils/tab-context';
+import TabState from '@opendatafit/ember-simple-tabs/utils/tab-state';
 
 export default class ApplicationController extends Controller {
   tabs = [
@@ -30,12 +30,12 @@ export default class ApplicationController extends Controller {
             }
           ];
  
-  myTabContext = null;
+  myTabState = null;
 
   constructor() {
     super(...arguments);
 
-    this.myTabContext = new TabContext(this.tabs);
+    this.myTabState = new TabState(this.tabs);
   }
   
 }

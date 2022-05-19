@@ -1,10 +1,10 @@
 <h2 id="title">Welcome to Ember</h2>
 
 <EmberSimpleTabs::TabList 
-    @tabContext={{this.myTabContext}}
+    @tabState={{this.myTabState}}
     as |tl|>
-  {{#each this.myTabContext.tabs as |tab index|}}
-    <li class={{if (eq this.myTabContext.selectedIndex index) "isActive"}}>
+  {{#each this.myTabState.tabs as |tab index|}}
+    <li class={{if (eq this.myTabState.selectedIndex index) "isActive"}}>
       <tl.tab @index={{index}}>
         {{tab.title}}
       </tl.tab>
@@ -13,9 +13,9 @@
 </EmberSimpleTabs::TabList>
 
 <EmberSimpleTabs::TabPanels 
-    @tabContext={{this.myTabContext}}
+    @tabState={{this.myTabState}}
     as |tl|>
-  {{#each this.myTabContext.tabs as |tab index|}}
+  {{#each this.myTabState.tabs as |tab index|}}
     <tl.panel @index={{index}}>
       {{tab.content}}
     </tl.panel>

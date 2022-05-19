@@ -1,7 +1,7 @@
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
-export default class TabContext {
+export default class TabState {
   @tracked _tabsContent = [];
   @tracked _selectedIndex = 0;
 

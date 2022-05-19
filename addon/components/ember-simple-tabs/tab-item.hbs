@@ -1,6 +1,6 @@
 <button 
     role="tab"
-    aria-selected={{if (eq @tabContext.selectedIndex @index) "true" "false"}}
-    {{on "click" (fn @tabContext.handleButtonClick @index)}}>
+    aria-selected={{if (eq @tabState.selectedIndex @index) "true" "false"}}
+    {{on "click" (fn @tabState.handleButtonClick @index)}}>
   {{yield}}
 </button>
