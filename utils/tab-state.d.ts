@@ -1,6 +1,4 @@
-interface TabInterface {
-    [key: string]: unknown;
-}
+declare type TabInterface = unknown;
 export default class TabState {
     private _tabsContent;
     private _selectedIndex;
