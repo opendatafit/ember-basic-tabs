@@ -2,9 +2,8 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
 
-interface TabInterface {
-  [key: string]: unknown;
-};
+// Accepts arbitrary object as tab content
+type TabInterface = unknown;
 
 
 export default class TabState {
