@@ -12,6 +12,7 @@
 /.env*
 /.pnp*
 /.sass-cache
+/.eslintcache
 /connect.lock
 /coverage/
 /libpeerconnection.log
@@ -22,7 +23,9 @@
 # ember-try
 /.node_modules.ember-try/
 /bower.json.ember-try
+/npm-shrinkwrap.json.ember-try
 /package.json.ember-try
+<<<<<<< HEAD
 
 # vim.gitignore
 # https://github.com/github/gitignore/blob/main/Global/Vim.gitignore
@@ -45,3 +48,10 @@ Sessionx.vim
 tags
 # Persistent undo
 [._]*.un~
+=======
+/package-lock.json.ember-try
+/yarn.lock.ember-try
+
+# broccoli-debug
+/DEBUG/
+>>>>>>> 36946d2 (v3.20.0...v4.4.0)
