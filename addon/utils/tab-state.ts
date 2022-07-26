@@ -2,24 +2,21 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
 
-type tabsContentType = Array<{
-  name: string;
-  title: string;
-  icon: string;
-  content: string;
-}>;
+interface TabInterface {
+  [key: string]: unknown;
+};
 
 
 export default class TabState {
-  @tracked private _tabsContent: tabsContentType = [];
+  @tracked private _tabsContent: Array<TabInterface> = [];
   @tracked private _selectedIndex: number = 0;
 
-  constructor(tabs: tabsContentType, selected: number = 0) {
+  constructor(tabs: Array<TabInterface>, selected: number = 0) {
     this._tabsContent = tabs;
     this._selectedIndex = selected;
   }
 
-  get tabs(): tabsContentType {
+  get tabs(): Array<TabInterface> {
     return this._tabsContent;
   }
 
