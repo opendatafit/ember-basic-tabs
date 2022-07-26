@@ -1,14 +1,11 @@
-declare type tabsContentType = Array<{
-    name: string;
-    title: string;
-    icon: string;
-    content: string;
-}>;
+interface TabInterface {
+    [key: string]: unknown;
+}
 export default class TabState {
     private _tabsContent;
     private _selectedIndex;
-    constructor(tabs: tabsContentType, selected?: number);
-    get tabs(): tabsContentType;
+    constructor(tabs: Array<TabInterface>, selected?: number);
+    get tabs(): Array<TabInterface>;
     get selectedIndex(): number;
     handleButtonClick(index: number): void;
 }
