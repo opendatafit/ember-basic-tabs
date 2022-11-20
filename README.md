@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-ember-simple-tabs
-==============================================================================
-=======
-# @opendatafit/ember-simple-tabs
->>>>>>> 36946d2 (v3.20.0...v4.4.0)
+# @opendatafit/ember-basic-tabs
 
 [Short description of the addon.]
 
@@ -18,7 +13,7 @@ ember-simple-tabs
 ## Installation
 
 ```
-ember install ember-simple-tabs
+ember install @opendatafit/ember-basic-tabs
 ```
 
 

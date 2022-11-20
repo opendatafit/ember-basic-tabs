@@ -1,1 +1,1 @@
-export { default } from '@opendatafit/ember-simple-tabs/utils/tab-state';
+export { default } from '@opendatafit/ember-basic-tabs/utils/tab-state';

@@ -1,6 +1,6 @@
 {{page-title "Dummy"}}
 
-<EmberSimpleTabs::TabList 
+<EmberBasicTabs::TabList 
     @tabState={{this.myTabState}}
     as |tl|>
   {{#each this.myTabState.tabs as |tab index|}}
@@ -10,9 +10,9 @@
       </tl.tab>
     </li>
   {{/each}}
-</EmberSimpleTabs::TabList>
+</EmberBasicTabs::TabList>
 
-<EmberSimpleTabs::TabPanels 
+<EmberBasicTabs::TabPanels 
     @tabState={{this.myTabState}}
     as |tl|>
   {{#each this.myTabState.tabs as |tab index|}}
@@ -20,6 +20,6 @@
       {{tab.content}}
     </tl.panel>
   {{/each}}
-</EmberSimpleTabs::TabPanels>
+</EmberBasicTabs::TabPanels>
 
 {{outlet}}

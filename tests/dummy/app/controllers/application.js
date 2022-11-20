@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
 
-import TabState from '@opendatafit/ember-simple-tabs/utils/tab-state';
+import TabState from '@opendatafit/ember-basic-tabs/utils/tab-state';
 
 export default class ApplicationController extends Controller {
   tabs = [
