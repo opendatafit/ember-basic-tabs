@@ -3,22 +3,22 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | ember-simple-tabs/tab-panel', function(hooks) {
+module('Integration | Component | ember-basic-tabs/tab-panel', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<EmberSimpleTabs::TabPanel />`);
+    await render(hbs`<EmberBasicTabs::TabPanel />`);
 
     assert.equal(this.element.textContent.trim(), '');
 
     // Template block usage:
     await render(hbs`
-      <EmberSimpleTabs::TabPanel>
+      <EmberBasicTabs::TabPanel>
         template block text
-      </EmberSimpleTabs::TabPanel>
+      </EmberBasicTabs::TabPanel>
     `);
 
     assert.equal(this.element.textContent.trim(), 'template block text');

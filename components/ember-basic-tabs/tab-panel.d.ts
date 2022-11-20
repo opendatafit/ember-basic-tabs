@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
 import TabState from '../../utils/tab-state';
-interface EmberSimpleTabsTabItemComponentArgs {
+interface EmberBasicTabsTabPanelComponentArgs {
     Args: {
         Named: {
             tabState: TabState;
@@ -8,7 +8,7 @@ interface EmberSimpleTabsTabItemComponentArgs {
         Positional: never;
     };
 }
-export default class EmberSimpleTabsTabItemComponent extends Component<EmberSimpleTabsTabItemComponentArgs> {
+export default class EmberBasicTabsTabPanelComponent extends Component<EmberBasicTabsTabPanelComponentArgs> {
 }
 export {};
-//# sourceMappingURL=tab-item.d.ts.map
+//# sourceMappingURL=tab-panel.d.ts.map

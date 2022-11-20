@@ -73,16 +73,16 @@
         "tests/dummy/app/*",
         "app/*"
       ],
-      "@opendatafit/ember-simple-tabs": [
+      "@opendatafit/ember-basic-tabs": [
         "addon"
       ],
-      "@opendatafit/ember-simple-tabs/*": [
+      "@opendatafit/ember-basic-tabs/*": [
         "addon/*"
       ],
-      "@opendatafit/ember-simple-tabs/test-support": [
+      "@opendatafit/ember-basic-tabs/test-support": [
         "addon-test-support"
       ],
-      "@opendatafit/ember-simple-tabs/test-support/*": [
+      "@opendatafit/ember-basic-tabs/test-support/*": [
         "addon-test-support/*"
       ],
       "*": [
