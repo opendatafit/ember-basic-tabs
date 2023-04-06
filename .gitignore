@@ -9,7 +9,7 @@
 /node_modules/
 
 # misc
-/.env*
+# /.env*
 /.pnp*
 /.sass-cache
 /.eslintcache
@@ -19,6 +19,7 @@
 /npm-debug.log*
 /testem.log
 /yarn-error.log
+/.direnv/
 
 # ember-try
 /.node_modules.ember-try/
