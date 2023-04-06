@@ -1,5 +1,8 @@
 <div role="tabpanel"
-    aria-hidden={{if (eq @tabState.selectedIndex @index) "false" "true"}}
+    id={{this.panelID}}
+    aria-hidden={{if this.isHidden "true" "false"}}
+    aria-labelledby={{this.tabID}}
+    hidden={{this.isHidden}}
     >
   {{yield}}
 </div>
