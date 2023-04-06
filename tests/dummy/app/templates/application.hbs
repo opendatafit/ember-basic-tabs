@@ -22,4 +22,27 @@
   {{/each}}
 </EmberBasicTabs::TabPanels>
 
+further tabs:
+<EmberBasicTabs::TabList 
+    @tabState={{this.secondaryTabState}}
+    as |tl|>
+  {{#each this.secondaryTabState.tabs as |tab index|}}
+    <li role="presentation" class={{if (eq this.secondaryTabState.selectedIndex index) "isActive"}}>
+      <tl.tab @index={{index}}>
+        {{tab.title}}
+      </tl.tab>
+    </li>
+  {{/each}}
+</EmberBasicTabs::TabList>
+
+<EmberBasicTabs::TabPanels 
+    @tabState={{this.secondaryTabState}}
+    as |tl|>
+  {{#each this.secondaryTabState.tabs as |tab index|}}
+    <tl.panel @index={{index}}>
+      {{tab.content}}
+    </tl.panel>
+  {{/each}}
+</EmberBasicTabs::TabPanels>
+
 {{outlet}}
