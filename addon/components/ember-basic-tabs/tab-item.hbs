@@ -1,6 +1,8 @@
 <button 
     role="tab"
-    aria-selected={{if (eq @tabState.selectedIndex @index) "true" "false"}}
+    id={{this.tabID}}
+    aria-selected={{if this.isPanelIDHidden "false" "true"}}
+    aria-controls={{this.panelID}}
     {{on "click" (fn @tabState.handleButtonClick @index)}}>
   {{yield}}
 </button>
