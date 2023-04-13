@@ -3,24 +3,79 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | ember-basic-tabs/tab-panel', function(hooks) {
-  setupRenderingTest(hooks);
+import TabState from '@opendatafit/ember-basic-tabs/utils/tab-state';
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+module(
+  'Integration | Component | ember-basic-tabs/tab-panel',
+  function (hooks) {
+    setupRenderingTest(hooks);
 
-    await render(hbs`<EmberBasicTabs::TabPanel />`);
+    test('it renders', async function (assert) {
+      let myTabState = new TabState();
+      this.set('myTabState', myTabState);
 
-    assert.equal(this.element.textContent.trim(), '');
+      await render(
+        hbs`<EmberBasicTabs::TabPanel @tabState={{this.myTabState}} />`
+      );
 
-    // Template block usage:
-    await render(hbs`
-      <EmberBasicTabs::TabPanel>
+      assert.equal(this.element.textContent.trim(), '');
+
+      // Template block usage:
+      await render(hbs`
+      <EmberBasicTabs::TabPanel @tabState={{this.myTabState}}>
         template block text
       </EmberBasicTabs::TabPanel>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
-  });
-});
+      assert.equal(this.element.textContent.trim(), 'template block text');
+    });
+
+    test('it renders', async function (assert) {
+      let myTabState = new TabState();
+      this.set('myTabState', myTabState);
+
+      await render(
+        hbs`<EmberBasicTabs::TabPanel @tabState={{this.myTabState}} />`
+      );
+
+      assert.equal(this.element.textContent.trim(), '');
+
+      // Template block usage:
+      await render(hbs`
+      <EmberBasicTabs::TabPanel @tabState={{this.myTabState}}>
+        template block text
+      </EmberBasicTabs::TabPanel>
+    `);
+
+      assert.equal(this.element.textContent.trim(), 'template block text');
+    });
+
+    test('should render correct panel id', async function (assert) {
+      let myTabState = new TabState();
+      this.set('myTabState', myTabState);
+
+      await render(
+        hbs`<EmberBasicTabs::TabPanel @tabState={{this.myTabState}} @index=0 />`
+      );
+
+      assert.equal(
+        this.element.querySelector('div').getAttribute('id'),
+        `${myTabState.name}-0`
+      );
+    });
+
+    test('should render aria-hidden=false', async function (assert) {
+      let myTabState = new TabState();
+      this.set('myTabState', myTabState);
+
+      await render(
+        hbs`<EmberBasicTabs::TabPanel @tabState={{this.myTabState}} @index=0 />`
+      );
+
+      assert.equal(
+        this.element.querySelector('div').getAttribute('aria-hidden'),
+        'false'
+      );
+    });
+  }
+);

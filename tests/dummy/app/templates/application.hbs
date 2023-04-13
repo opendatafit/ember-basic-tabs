@@ -4,7 +4,8 @@
     @tabState={{this.myTabState}}
     as |tl|>
   {{#each this.myTabState.tabs as |tab index|}}
-    <li role="presentation" class={{if (eq this.myTabState.selectedIndex index) "isActive"}}>
+    <li role="presentation" 
+        class={{if (eq this.myTabState.selectedIndex index) "isActive"}}>
       <tl.tab @index={{index}}>
         {{tab.title}}
       </tl.tab>
