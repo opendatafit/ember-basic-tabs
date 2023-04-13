@@ -20,7 +20,7 @@ export default class TabState {
     if(name) {
       this._name = name;
     } else {
-      this._name = nanoid(8);
+      this._name = `ts${nanoid(8)}`;
     }
   }
 
