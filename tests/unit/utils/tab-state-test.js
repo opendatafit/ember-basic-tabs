@@ -5,7 +5,7 @@ module('Unit | Utility | tab-state', function() {
 
   // TODO: Replace this with your real tests.
   test('it works', function(assert) {
-    let result = tabState();
+    let result = new tabState();
     assert.ok(result);
   });
 });
