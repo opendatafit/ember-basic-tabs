@@ -33,7 +33,7 @@ jobs:
       - name: Run Tests
         uses: Borales/actions-yarn@v4.2.0
         with: 
-          cmd: yarn ember test
+          cmd: ember test
 
   try-scenarios:
     name: ${{ matrix.try-scenario }}
@@ -67,4 +67,4 @@ jobs:
       - name: Run Tests
         uses: Borales/actions-yarn@v4.2.0
         with: 
-          cmd: yarn ember test
+          cmd: ember test
