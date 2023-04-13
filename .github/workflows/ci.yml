@@ -31,7 +31,7 @@ jobs:
       #- name: Lint
       #run: npm run lint
       - name: Run Tests
-        uses: actions/set-yarn@v4
+        uses: borales/setup-yarn@v4
         with: 
           cmd: yarn ember test
 
@@ -61,10 +61,10 @@ jobs:
           node-version: 16.x
           cache: npm
       - name: Install Dependencies
-        uses: actions/set-yarn@v4
+        uses: borales/setup-yarn@v4
         with:
           cmd: install
       - name: Run Tests
-        uses: actions/set-yarn@v4
+        uses: borales/setup-yarn@v4
         with: 
           cmd: yarn ember test
