@@ -3,6 +3,7 @@
     aria-hidden={{if this.isHidden "true" "false"}}
     aria-labelledby={{this.tabID}}
     hidden={{this.isHidden}}
+    ...attributes
     >
   {{yield}}
 </div>
