@@ -59,7 +59,7 @@ constructor() {
 
 ```
 
-```
+```handlebars
 <EmberBasicTabs::TabList 
     @tabState={{this.myTabState}}
     as |tl|>
@@ -74,7 +74,7 @@ constructor() {
 </EmberBasicTabs::TabList>
 ```
 
-```
+```handlebars
 <EmberBasicTabs::TabPanels 
     @tabState={{this.myTabState}}
     as |tl|>
