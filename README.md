@@ -1,4 +1,4 @@
-# @opendatafit/ember-basic-tabs
+# ember-basic-tabs
 
 Unopinionated, no-thrills tabs for Ember.js
 
@@ -17,6 +17,8 @@ ember install @opendatafit/ember-basic-tabs
 
 
 ## Usage
+
+### Creating and managing tab state
 
 ```javascript
 import TabState from `@opendatafit/ember-basic-tabs/utils/tab-state';
@@ -59,6 +61,8 @@ constructor() {
 
 ```
 
+### Rendering tab list
+
 ```handlebars
 <EmberBasicTabs::TabList 
     @tabState={{this.myTabState}}
@@ -73,6 +77,8 @@ constructor() {
   {{/each}}
 </EmberBasicTabs::TabList>
 ```
+
+### Rendering panels
 
 ```handlebars
 <EmberBasicTabs::TabPanels 
